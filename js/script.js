@@ -222,19 +222,26 @@ const newItems = items.map((elem) => {
 
     // Definisco la variabile che sfruttera la funzione della lettera casuale
     let rngLetter = randomLetter()
+
+    // Versione con spread
+    const obj = {...elem, letter: rngLetter}
     
     // Creo l'oggetto con l'aggiunta della lettera
-    let { name, type, color } = elem;
+    // let { name, type, color } = elem;
 
-    let obj = {
-        name,
-        type,
-        color,
-        letter: rngLetter,
-    }
+    // let obj = {
+    //     name,
+    //     type,
+    //     color,
+    //     letter: rngLetter,
+    // }
 
     return obj;
 })
+
+
+
+
 
 console.log(newItems)
 
