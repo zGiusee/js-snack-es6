@@ -85,13 +85,14 @@ console.log(namesAndFouls)
 
 
 
+
+
 //****************************
 //     INIZIO SNACK 1
 //****************************
 
 
 // Creo l'array delle bici
-
 const bicycles = [
 
     {
@@ -141,24 +142,34 @@ bicycles.forEach((elem) => {
 });
 
 
-// for(let i = 0; i < bicycles.length; i++){
+// DEFINISCO LA STESSA FUNZIONALITA PERò CON UN CICLO FOR
+// let lighterBicycle = bicycles[0];
 
-//     if(bicycles[i].weight < lighterBicycle){
+// for(let i = 1; i < bicycles.length; i++){
 
-//         lighterBicycle = bicycles[i].weight;
+//     if(bicycles[i].weight < lighterBicycle.weight){
+
+//         lighterBicycle = bicycles[i];
 
 //         console.log(lighterBicycle)
 //     }
 
-//     // let { bicycleName, weight} = 
-
 // }
-// console.log(lighterBicycle)
+
+// let {bicycleName, weight} = lighterBicycle
+
+// console.log(bicycleName);
+// console.log(weight);
+
+
+console.log(lighterBicycle)
 
 
 //****************************
 //     FINE SNACK 1
 //****************************
+
+
 
 
 
@@ -206,29 +217,26 @@ const items = [
     },
 ];
 
-
-let rngLetter = console.log(randomLetter())
-
+// Ciclo gli oggetti con la funzione map per poi crearne uno nuovo ma aggiungendo il parametro 'letter'
 const newItems = items.map((elem) => {
 
+    // Definisco la variabile che sfruttera la funzione della lettera casuale
+    let rngLetter = randomLetter()
     
-    // let { name, type, color } = elem;
+    // Creo l'oggetto con l'aggiunta della lettera
+    let { name, type, color } = elem;
 
     let obj = {
-        name: elem.name,
-        type: elem.type,
-        color: elem.color,
+        name,
+        type,
+        color,
         letter: rngLetter,
-        
     }
 
     return obj;
-
 })
 
 console.log(newItems)
-
-
 
 //****************************
 //     FINE SNACK 3
