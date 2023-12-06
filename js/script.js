@@ -153,9 +153,85 @@ bicycles.forEach((elem) => {
 //     // let { bicycleName, weight} = 
 
 // }
-// // console.log(lighterBicycle)
+// console.log(lighterBicycle)
 
 
 //****************************
 //     FINE SNACK 1
 //****************************
+
+
+
+//****************************
+//     INIZIO SNACK 3
+//****************************
+
+// FUNZIONI
+
+// Creo la funzione che generi una lettera dell'alfabeto casuale 
+function randomLetter(){
+
+    const letters = 'abcdefghijklmnopqrstuvwxyz';
+
+    let letter = Math.floor(Math.random() * letters.length);
+
+    return letters[letter];
+}
+
+// FINE FUNZIONI
+
+
+// Creo l'array degli oggetti
+const items = [
+
+    {
+        name: 'Poppy',
+        type: 'tshirt',
+        color: 'red'
+    },
+    {
+        name: 'Jumping',
+        type: 'occhiali',
+        color: 'blue'
+    },
+    {
+        name: 'CrissCross',
+        type: 'Scarpe',
+        color: 'Black'
+    },
+    {
+        name: 'Jenny',
+        type: 'borsa',
+        color: 'pink'
+    },
+];
+
+
+let rngLetter = console.log(randomLetter())
+
+const newItems = items.map((elem) => {
+
+    
+    // let { name, type, color } = elem;
+
+    let obj = {
+        name: elem.name,
+        type: elem.type,
+        color: elem.color,
+        letter: rngLetter,
+        
+    }
+
+    return obj;
+
+})
+
+console.log(newItems)
+
+
+
+//****************************
+//     FINE SNACK 3
+//****************************
+
+
